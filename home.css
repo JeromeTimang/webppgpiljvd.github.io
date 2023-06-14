@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -29,6 +30,7 @@ header {
 .menu li {
   margin-left: 0;
 }
+
 .menu li a {
   text-decoration: none;
   color: #2c80a9;
@@ -46,10 +48,12 @@ header {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.vision{
+
+.vision {
   margin-top: 100px;
   text-align: center;
 }
+
 .vision-text {
   font-size: 18px;
   text-align: center;
@@ -86,6 +90,7 @@ header {
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  margin-top: 200px;
 }
 
 .card:hover {
@@ -120,28 +125,7 @@ header {
   font-family: Arial, sans-serif;
 }
 
-@media (max-width: 767px) {
-  .card {
-    padding: 15px;
-  }
-  
-  .card .sub-title {
-    font-size: 20px;
-  }
-  
-  .card .vision-text {
-    font-size: 16px;
-  }
-  
-  .card .mission-list li {
-    font-size: 14px;
-  }
-}
-
-
-
-
-/* Styles for the checkbox-based dropdown menu */
+/* Dropdown Menu Styles */
 #navbar-toggle {
   display: none;
 }
@@ -152,10 +136,9 @@ header {
   display: none;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 767px) {
   .menu {
     display: none;
-    
   }
 
   #navbar-toggle:checked + .menu {
@@ -181,8 +164,18 @@ header {
   }
 }
 
+/* Navigation Styles */
+
+
+
 h1 {
-  margin: 0;
+  margin: 1px;
+}
+
+nav img {
+  width:50px;
+  height: 100%;
+  margin-right: 10px;
 }
 
 nav {
@@ -213,15 +206,7 @@ nav ul li a:hover {
   background-color: #555;
 }
 
-section {
-  padding: 20px;
-}
-
-nav img {
-  width: 60px;
-  margin-right: 10px;
-}
-
+/* Home Section Styles */
 .home-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(background.jpg);
   background-size: cover;
@@ -239,15 +224,15 @@ nav img {
   font-size: 18px;
 }
 
-/* Responsiveness for mobile devices */
 @media (max-width: 767px) {
   .home-section {
     padding: 200px 20px;
   }
 }
 
+/* Worship Schedule Styles */
 .worship-schedule {
-  margin-top: 50px;
+  margin-top: 200px;
   text-align: center;
 }
 
@@ -259,35 +244,23 @@ nav img {
 .worship-schedule table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 200px;
 }
 
 .worship-schedule table th,
 .worship-schedule table td {
+  min-width: auto;
   padding: 10px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.worship-schedule table th {
-  background-color: #f8f8f8;
-  color: #2c80a9;
-  font-weight: bold;
-}
-
-.worship-schedule table td {
-  color: #555;
-}
-
-.worship-schedule p {
-  margin-top: 20px;
-  font-size: 16px;
-}
-
+/* Countdown Section Styles */
 .countdown-section {
   margin-top: 5px;
   text-align: center;
 }
-
-
 
 .countdown-section h2 {
   color: #2c80a9;
@@ -311,6 +284,7 @@ nav img {
   margin-bottom: 50px;
 }
 
+/* Contact Footer Styles */
 .contact-footer {
   background-color: #2c80a9;
   padding: 20px;
@@ -329,16 +303,25 @@ nav img {
   text-align: left;
 }
 
-.contact-info p{
+.contact-info p {
   color: #f8f8f8;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .contact-info p .emoji {
   margin-right: 5px;
 }
 
+.contact-info a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #1500ff;
+}
 
 .back-to-top-button {
   display: inline-block;
@@ -353,16 +336,3 @@ nav img {
 .back-to-top-button:hover {
   background-color: #185c7b;
 }
-
-.contact-info a {
-  color: #ffffff; 
-  text-decoration: underline;
-  
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-  color: #1500ff;
-}
-
-
