@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>PPGIL JVD</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="">
+            <input type="checkbox" id="navbar-toggle">
+            <label for="navbar-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="#visi-misi">Visi & Misi</a></li>
+                <li><a href="#jadwal-ibadah">Jadwal Ibadah</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home-section">
+        <h2>Selamat datang di Web PPGPIL JVD</h2>
+        <p>Temukan kehidupan yang bermakna dan berkat melalui ibadah bersama kami.</p>
+    </section>
+
+    <section >
+        <div class="card">
+            <h3 class="sub-title" id="visi-misi">Visi</h3>
+            <p class="vision-text">Menjadikan pemuda(i) gereja yang mandiri, berinovasi, berkarakter untuk mewujudkan tri panggilan gereja.</p>
+        </div>
+        <div class="card">
+            <h3 class="sub-title">Misi</h3>
+            <ol class="mission-list">
+                <li>Mempererat tali persaudaraan antara anggota PP-GPIL JVD</li>
+                <li>Menjadi saksi hidup yang aktif dan bersemangat tentang iman kepada Kristus</li>
+                <li>Mengajak anggota pemuda(i) gereja dalam kehidupan ibadah gereja</li>
+                <li>Mempersiapkan pemuda(i) gereja melalui pembinaan bagi masa depan gereja</li>
+                <li>Menjadi anggota yang aktif dalam menyampaikan kebenaran di dalam kehidupan bergereja</li>
+                <li>Mempersiapkan pemuda(i) gereja yang cakap dan terampil dalam pelayanan yang akan datang</li>
+            </ol>
+        </div>
+    </section>
+    
+
+    <section id="jadwal-ibadah">
+        <div class="worship-schedule">
+            <h2>Jadwal Ibadah PPGPIL BULAN JUNI</h2>
+            <section>
+                <div class="countdown-section">
+                    <h2>Countdown Ibadah Terdekat</h2>
+                    <div id="countdown"></div>
+                </div>
+            </section>
+            <script>
+                // Set the date and time for the worship
+                const worshipDate = new Date("2023-06-16T19:00:00");
+            
+                // Function to calculate and display the countdown
+                function calculateCountdown() {
+                    const now = new Date().getTime();
+                    const difference = worshipDate - now;
+            
+                    // Calculate days, hours, minutes, and seconds
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+                    // Display the countdown
+                    document.getElementById("countdown").innerHTML = `
+                        <div class="countdown-item">
+                            <div class="countdown-value">${days}</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value">${hours}</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value">${minutes}</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value">${seconds}</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    `;
+                }
+            
+                // Update the countdown every second
+                setInterval(calculateCountdown, 1000);
+            
+                // Initial calculation of the countdown
+                calculateCountdown();
+            </script>
+            
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>Jam</th>
+                    <th>Pelayan Firman</th>
+                    <th>Liturgis</th>
+                    <th>Keyboardis</th>
+                    <th>Gitaris</th>
+                    <th>Lokasi</th>
+                </tr>
+                <tr>
+                    <td>Jumat, 16 Juni</td>
+                    <td>19.00 WITA</td>
+                    <td>Pdt. Adhy Sandra</td>
+                    <td>Kristin Paujung</td>
+                    <td>Stevly Padi</td>
+                    <td>Librensi Sumbang</td>
+                    <td>GPIL JVD WILTIM</td>
+                </tr>
+                <tr>
+                    <td>Minggu, 25 Juni</td>
+                    <td>19.00 WITA</td>
+                    <td>Eriyundani Asturias</td>
+                    <td>Resa Christin Rante Tondok</td>
+                    <td>Marsel Algarian</td>
+                    <td>Samuel Surash</td>
+                    <td>Rumah Sdri Debby Wahongan</td>
+                </tr>
+                <tr>
+                    <td>Jumat, 30 Juni</td>
+                    <td>19.00 WITA</td>
+                    <td>Pnt. Arfandly Bedmar</td>
+                    <td>Sinarwati Panandu</td>
+                    <td>Kristin Paujung</td>
+                    <td>Blessingsy Tallean</td>
+                    <td>GPIL JVD WILTIM</td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
+    
+    
+
+    <section id="kontak">
+        <footer class="contact-footer">
+            <div class="footer-container">
+                <div class="contact-info">
+                    <p>&#x1F4F1; <a href="https://wa.me/6289520392087">HUMAS PPGPIL: +628-952-0392-087(Tri) </a> </p>
+                    <p>&#x1F3E0; <a href="https://www.instagram.com/ppgpil_viadolorosa/">@ppgpilviadolorosa</a> </p>
+                    <p>&#x1F30D; Alamat Sekretariat: Jl. Amirullah V No.6, Kota Makassar, 90131</p>
+                    <p>&#x1F4B3; Nomor Rekening: 746601009145539
+                        Bri A/N reni kezia </p>
+                </div>
+                <div class="back-to-top">
+                    <a href="#" id="backToTopBtn" class="back-to-top-button">Back to Top</a>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            // Smooth scroll to top
+            const backToTopButton = document.getElementById("backToTopBtn");
+        
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        
+            backToTopButton.addEventListener("click", scrollToTop);
+        </script>
+                
+    </section>
+    
+
+    <script src="home.js"></script>
+</body>
+
+</html>
